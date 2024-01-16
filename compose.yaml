@@ -1,0 +1,29 @@
+networks:
+  backend:
+
+services:
+  customerdbserver:
+   container_name: customer-db
+   image: mcr.microsoft.com/mssql/server:2019-latest
+   environment:
+    - ACCEPT_EULA=Y
+    - SA_PASSWORD=Passw0rd@123
+   networks:
+   - backend
+   ports:
+     - 8001:1433
+
+  server:
+    container_name: customer-api
+    build:
+      context: .
+      target: final
+    ports:
+      - 8002:8080
+    networks:
+     - backend
+    environment:
+      - DB_HOST=customerdbserver
+      - DB_NAME=customerdb
+      - DB_SA_PASWORD=Passw0rd@123
+      - DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false

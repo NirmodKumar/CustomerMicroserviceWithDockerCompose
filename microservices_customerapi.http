@@ -1,0 +1,6 @@
+@microservices_customerapi_HostAddress = http://localhost:5075
+
+GET {{microservices_customerapi_HostAddress}}/api/Customer
+Accept: application/json
+
+###

@@ -1,0 +1,50 @@
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger/index.html",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DB_HOST": "NIRMOD\\SQLEXPRESS",
+        "DB_NAME": "customerdb",
+        "DB_SA_PASWORD": "Passw0rd@123"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5075"
+    },
+    "https": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger/index.html",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DB_HOST": "NIRMOD\\SQLEXPRESS",
+        "DB_NAME": "customerdb",
+        "DB_SA_PASWORD": "Passw0rd@123"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7137;http://localhost:5075"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger/index.html",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DB_HOST": "NIRMOD\\SQLEXPRESS",
+        "DB_NAME": "customerdb",
+        "DB_SA_PASWORD": "Passw0rd@123"
+      }
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:45698",
+      "sslPort": 44336
+    }
+  }
+}
